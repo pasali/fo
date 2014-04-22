@@ -9,31 +9,6 @@ http://mhmtbsl.net/
 Şubat 2014
 
 ---
-
-##   Git Kullanımı Ve Olası Sorunlar
-
--   Diğer geliştricilerinin değişikliklerinin üzerine yazmak(git push --force)
-
-        git config --system receive.denyNonFastForwards true
-
--   Yerel deponuzda commitlenmemiş değişikliklerinizin üzerine yazmak
-
--   Conflicts(çakışmalar)
-
----
-
-##   Çakışmalar(conflict) Nasıl  Çözülür?
-
--   meld, vimdiff, diffmerge, git-mergetool...
--   Basit bir text editorde iş görür
--   Conflict örneği;
-
-        <<<<<<< HEAD
-        Hello, master change.
-        =======
-        Hello, branch b1 change.
-        >>>>>>> b1
----
 ##   Değişiklik(Commit) Mesajları Nasıl Yazılır?
 
 -   En fazla 50 karakterlik bir başlık(işi özetleyen)
@@ -89,15 +64,17 @@ http://mhmtbsl.net/
 ---
 ##   Projeye Yeni Özellik Ekleme
 
--    
--    
--    
+-   Yeni bir dal oluşturulur
+-   İyi pratik açısından özellikle ilgi bir isim verilir
+-   Dala geçiş yapılır
+-   Özellik çalış duruma geldiğinde `master` dalına birleştirilir
 
 ---
 
 ##   Hata düzeltme
 
--
+-   Yeni özellik ekleme gibi düşünülebilir
+-   Aynı adımlar uygulanıp
 
 ---
 
@@ -109,18 +86,155 @@ http://mhmtbsl.net/
 
 ##   squash merge
 
--   git merge --squash bugfix
--   git commit -m 'fix bug'
+-   Hata çözdünüz veya yeni bir özellik eklediniz
+-   Bütün dalı` merge` etmek yerine
+-   İlgili daldaki bütün commit'leri tek bir commit'e sığdırmak isteyebilirsiniz
+-   İşte tam burda `merge --squash` yardımınıza koşuyor
+
+        git merge --squash dal_ismi
+        git commit -m '... çözüldü.'
 
 ---
 
-##   git work flow
+##  merge Vs. merge --squash
+
+ ![SquashVsMerge](media/merge-and-squash-merge.png)
+
+
+---
+
+##  Git Workflows
+
+-   Centralized Workflow
+-   Gitflow Workflow
+-   Github Workflow (feautre branch)
+-   Forking Workflow
+-   Pull requests
+
+Ayrıntılı bilgi
+[burda](https://www.atlassian.com/git/workflows#!workflow-feature-branch)
+
+---
+
+##   Github Workflow
 
 -   `master` dalındaki her şey dağıtıma hazır olmalı
--   yeni bir özellik üzerinde `master` dalına bir dal ekleyerek çalış
--   değişiklikleri yeni dal adıyla sunucuya gönder
--   yardım almak ve ya `merge` işlemi için `pull request` gönder
--   biri `review` yaptıktan sonra isteği onaylarsa `merge` yap
--   artık `master` dalına gönderebilirsin
+-   Dallarla(branch) çalış
+-   İlgili dalı sunucuya gönder
+-   Takıldığın yerde `pull request` aç
+-   Biri `review` yaptıktan sonra isteği onaylarsa `merge` yap
+-   `master` dalına gönder
+
+---
+
+##  `master` dalındaki her şey dağıtıma hazır olmalı
+
+-   Sistemin ana kuralı
+-   Tek özel ve sabit  anlam taşıyan dal: `master`
+-   Her şey dağıtıma hazır, her an servis edilebilir
+-   Her zaman kararlı
+
+---
+
+##  Dallarla(branch) çalış
+
+-   Her yeni özellik ya da hata için yeni dal
+-   Dal isimleri işlerle alakalı
+-   Kimin ne iş yaptığı belli
+-   Geri dönülmesi kolay
+
+---
+
+##  Dallarla(branch) çalış 
+
+![Branch](media/branch.png)
+
+---
+
+##  İlgili dalı sunucuya gönder
+
+-   Sadece `master` önemli
+-   Yan dalların sunucuya gitmesi sorun çıkarmaz
+-   Ayretten yedekleme yapmış olunur
+-   Basit bir `git fetch` ile TODO list olur 
+
+
+---
+
+##  İlgili dalı sunucuya gönder
+
+        $ git fetch
+        remote: Counting objects: 3032, done.
+        remote: Compressing objects: 100% (947/947), done.
+        remote: Total 2672 (delta 1993), reused 2328 (delta 1689)
+        Receiving objects: 100% (2672/2672), 16.45 MiB | 1.04 MiB/s, done.
+        Resolving deltas: 100% (1993/1993), completed with 213 local objects.
+        From github.com:github/github
+          * [new branch]      charlock-linguist -> origin/charlock-linguist
+          * [new branch]      enterprise-non-config -> origin/enterprise-non-config
+          * [new branch]      fi-signup  -> origin/fi-signup
+          2647a42..4d6d2c2  git-http-server -> origin/git-http-server
+          * [new branch]      knyle-style-commits -> origin/knyle-style-commits
+          157d2b0..d33e00d  master     -> origin/master
+          * [new branch]      menu-behavior-act-i -> origin/menu-behavior-act-i
+          ea1c5e2..dfd315a  no-inline-js-config -> origin/no-inline-js-config
+          * [new branch]      svg-tests  -> origin/svg-tests
+          87bb870..9da23f3  view-modes -> origin/view-modes
+          * [new branch]      wild-renaming -> origin/wild-renaming
+
+---
+
+##  Takıldığın yerde `pull request` aç
+
+-   Hata ile karşılaştığınızda
+-   Yardıma ihtiyaç duydugunuz durumlarda
+-   Tasarımcı ile ortak çalışırken 
+-   Tavsiye almak için 
+
+---
+
+##  Takıldığın yerde `pull request` aç
+
+![pullreq](media/pullreq.png)
+
+---
+
+##  İstek onaylanırsa `merge` yap
+
+-   `pull request` onaylandıktan sonra `merge` yapılır
+
+![emoji](media/emoji.png)
+
+---
+
+##  `master` dalına gönder
+
+-   Her şey kullanıma hazır artık `master` dalına `push` edilebilir
+
+---
+
+##   Git Kullanımı Ve Olası Sorunlar
+
+-   Diğer geliştricilerinin değişikliklerinin üzerine yazmak(git push --force)
+
+        git config --system receive.denyNonFastForwards true
+
+-   Yerel deponuzda commitlenmemiş değişikliklerinizin üzerine yazmak
+
+-   Conflicts(çakışmalar)
+
+---
+
+##   Çakışmalar(conflict) Nasıl  Çözülür?
+
+-   meld, vimdiff, diffmerge, git-mergetool...
+-   Basit bir text editorde iş görür
+-   Conflict örneği;
+
+        <<<<<<< HEAD
+        Hello, master change.
+        =======
+        Hello, branch b1 change.
+        >>>>>>> b1
 
 ---
