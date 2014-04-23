@@ -65,9 +65,15 @@ http://mhmtbsl.net/
 
 ---
 
-##   Kişisel kopya
+##   Kişisel kopya nasıl yönetilir ? 
 
--
+-   Birden fazla gelştirici ile çalışıyorsunuz
+-   Önce asıl repo'yu fork ettiniz
+-   `git clone` ile makinenize kopayaladınız
+-   Yeni bir dal açıp özeliğinizi eklediniz
+-   Yeni dalı fork ettiğiniz repo'nuza yolladınız
+-   Artık bir adet `pull request` açarak  değişiliğinizi repo sahibine
+    yollayabilirsiniz.
 
 ---
 
