@@ -1,8 +1,9 @@
-#   Git Iş Akışı
+#   Git İş Akışı
 
 .fx: first
 
-pasali `<mhmtbsl@bil.omu.edu.tr>`
+pasali `<mhmtbsl@bil.omu.edu.tr> `          
+Ruziye Dağcı `<ruziye.dagci@bil.omu.edu.tr>`
 
 http://mhmtbsl.net/
 
@@ -47,21 +48,6 @@ http://mhmtbsl.net/
         # düzeltme penceresi açılır
 
 ---
-
-##   Git - rebase
-
--   `git merge` gibi dalları birleştirir
--   Commit geçmişinin doğrusal olmasını sağlar
--   Commit geçmişini bozar
--   Ortak çalışalan depolarda kullanılmamalıdır.
-
----
-
-##  Merge vs. Rebase
-
-   ![RebaseVsMerge](media/rebasevsmerge.png)
-
----
 ##   Projeye Yeni Özellik Ekleme
 
 -   Yeni bir dal oluşturulur
@@ -74,7 +60,8 @@ http://mhmtbsl.net/
 ##   Hata düzeltme
 
 -   Yeni özellik ekleme gibi düşünülebilir
--   Aynı adımlar uygulanıp
+-   Yeni bir dal oluşurturulur
+-   Hata çözülür, `master` dalına birleştirilir
 
 ---
 
@@ -84,7 +71,24 @@ http://mhmtbsl.net/
 
 ---
 
-##   squash merge
+##   Git - rebase
+
+-   `git merge` gibi dalları birleştirir
+-   Commit geçmişinin doğrusal olmasını sağlar
+-   Commit geçmişini bozar
+-   Ortak çalışalan depolarda kullanılmamalıdır.
+        
+        git checkout dal_ismi
+        git rebase master
+---
+
+##  Merge vs. Rebase
+
+   ![RebaseVsMerge](media/rebasevsmerge.png)
+
+---
+
+##  Git merge --squash
 
 -   Hata çözdünüz veya yeni bir özellik eklediniz
 -   Bütün dalı` merge` etmek yerine
@@ -118,16 +122,16 @@ Ayrıntılı bilgi
 
 ##   Github Workflow
 
--   `master` dalındaki her şey dağıtıma hazır olmalı
+-   `master` dalı stabil olmalı
 -   Dallarla(branch) çalış
 -   İlgili dalı sunucuya gönder
 -   Takıldığın yerde `pull request` aç
--   Biri `review` yaptıktan sonra isteği onaylarsa `merge` yap
+-   İstek onaylanırsa `merge` yap
 -   `master` dalına gönder
 
 ---
 
-##  `master` dalındaki her şey dağıtıma hazır olmalı
+##  `master`dalı stabil olmalı 
 
 -   Sistemin ana kuralı
 -   Tek özel ve sabit  anlam taşıyan dal: `master`
