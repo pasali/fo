@@ -259,7 +259,8 @@ Ayrıntılı bilgi
 
 ---
 
-##  Sorular ?
+## Teşekkürler 
 
+Sorular ?
 
 ---
