@@ -10,6 +10,33 @@ http://mhmtbsl.net/
 Şubat 2014
 
 ---
+
+##   Git Kullanımı Ve Olası Sorunlar
+
+-   Diğer geliştricilerinin değişikliklerinin üzerine yazmak(git push --force)
+
+        git config --system receive.denyNonFastForwards true
+
+-   Yerel deponuzda commitlenmemiş değişikliklerinizin üzerine yazmak
+
+-   Conflicts(çakışmalar)
+
+---
+
+##   Çakışmalar(conflict) Nasıl  Çözülür?
+
+-   meld, vimdiff, diffmerge, git-mergetool...
+-   Basit bir text editorde iş görür
+-   Conflict örneği;
+
+        <<<<<<< HEAD
+        Hello, master change.
+        =======
+        Hello, branch b1 change.
+        >>>>>>> b1
+
+---
+
 ##   Değişiklik(Commit) Mesajları Nasıl Yazılır?
 
 -   En fazla 50 karakterlik bir başlık(işi özetleyen)
@@ -53,7 +80,7 @@ http://mhmtbsl.net/
 -   Yeni bir dal oluşturulur
 -   İyi pratik açısından özellikle ilgi bir isim verilir
 -   Dala geçiş yapılır
--   Özellik çalış duruma geldiğinde `master` dalına birleştirilir
+-   Özellik çalışır duruma geldiğinde `master` dalına birleştirilir
 
 ---
 
@@ -67,7 +94,7 @@ http://mhmtbsl.net/
 
 ##   Kişisel kopya nasıl yönetilir ? 
 
--   Birden fazla gelştirici ile çalışıyorsunuz
+-   Birden fazla geliştirici ile çalışıyorsunuz
 -   Önce asıl repo'yu fork ettiniz
 -   `git clone` ile makinenize kopayaladınız
 -   Yeni bir dal açıp özeliğinizi eklediniz
@@ -149,7 +176,7 @@ Ayrıntılı bilgi
 ##  Dallarla(branch) çalış
 
 -   Her yeni özellik ya da hata için yeni dal
--   Dal isimleri işlerle alakalı
+-   Dal isimleri işlerle alakalı olmalı
 -   Kimin ne iş yaptığı belli
 -   Geri dönülmesi kolay
 
@@ -223,28 +250,16 @@ Ayrıntılı bilgi
 
 ---
 
-##   Git Kullanımı Ve Olası Sorunlar
+##  Kaynaklar
 
--   Diğer geliştricilerinin değişikliklerinin üzerine yazmak(git push --force)
-
-        git config --system receive.denyNonFastForwards true
-
--   Yerel deponuzda commitlenmemiş değişikliklerinizin üzerine yazmak
-
--   Conflicts(çakışmalar)
+-   http://scottchacon.com/2011/08/31/github-flow.html
+-   http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+-   https://www.atlassian.com/git
+-   http://blackbe.lt/common-git-problems-and-solutions/
 
 ---
 
-##   Çakışmalar(conflict) Nasıl  Çözülür?
+##  Sorular ?
 
--   meld, vimdiff, diffmerge, git-mergetool...
--   Basit bir text editorde iş görür
--   Conflict örneği;
-
-        <<<<<<< HEAD
-        Hello, master change.
-        =======
-        Hello, branch b1 change.
-        >>>>>>> b1
 
 ---

@@ -1786,7 +1786,91 @@ Ruziye Da&#287;c&#305; <code>&lt;ruziye.dagci@bil.omu.edu.tr&gt;</code></p>
             </aside>
             
             <aside class="page_number">
-              1/24
+              1/26
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: git-is-akisi/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Git Kullan&#305;m&#305; Ve Olas&#305; Sorunlar</h2></header>
+            
+            
+            <section><ul>
+<li>
+<p>Di&#287;er geli&#351;tricilerinin de&#287;i&#351;ikliklerinin &uuml;zerine yazmak(git push &mdash;force)</p>
+<pre><code>git config --system receive.denyNonFastForwards true
+</code></pre>
+</li>
+<li>
+<p>Yerel deponuzda commitlenmemi&#351; de&#287;i&#351;ikliklerinizin &uuml;zerine yazmak</p>
+</li>
+<li>
+<p>Conflicts(&ccedil;ak&#305;&#351;malar)</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="git-is-akisi/index.md">git-is-akisi/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/26
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: git-is-akisi/index.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>&Ccedil;ak&#305;&#351;malar(conflict) Nas&#305;l  &Ccedil;&ouml;z&uuml;l&uuml;r?</h2></header>
+            
+            
+            <section><ul>
+<li>meld, vimdiff, diffmerge, git-mergetool&hellip;</li>
+<li>Basit bir text editorde i&#351; g&ouml;r&uuml;r</li>
+<li>
+<p>Conflict &ouml;rne&#287;i;</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Hello, master change.
+=======
+Hello, branch b1 change.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; b1
+</code></pre>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="git-is-akisi/index.md">git-is-akisi/index.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/26
             </aside>
           </footer>
         </div>
@@ -1822,7 +1906,7 @@ Ruziye Da&#287;c&#305; <code>&lt;ruziye.dagci@bil.omu.edu.tr&gt;</code></p>
             </aside>
             
             <aside class="page_number">
-              2/24
+              4/26
             </aside>
           </footer>
         </div>
@@ -1857,7 +1941,7 @@ Ruziye Da&#287;c&#305; <code>&lt;ruziye.dagci@bil.omu.edu.tr&gt;</code></p>
             </aside>
             
             <aside class="page_number">
-              3/24
+              5/26
             </aside>
           </footer>
         </div>
@@ -1906,7 +1990,7 @@ git rebase -i {id}^
             </aside>
             
             <aside class="page_number">
-              4/24
+              6/26
             </aside>
           </footer>
         </div>
@@ -1924,7 +2008,7 @@ git rebase -i {id}^
 <li>Yeni bir dal olu&#351;turulur</li>
 <li>&#304;yi pratik a&ccedil;&#305;s&#305;ndan &ouml;zellikle ilgi bir isim verilir</li>
 <li>Dala ge&ccedil;i&#351; yap&#305;l&#305;r</li>
-<li>&Ouml;zellik &ccedil;al&#305;&#351; duruma geldi&#287;inde <code>master</code> dal&#305;na birle&#351;tirilir</li>
+<li>&Ouml;zellik &ccedil;al&#305;&#351;&#305;r duruma geldi&#287;inde <code>master</code> dal&#305;na birle&#351;tirilir</li>
 </ul></section>
             
           </div>
@@ -1941,7 +2025,7 @@ git rebase -i {id}^
             </aside>
             
             <aside class="page_number">
-              5/24
+              7/26
             </aside>
           </footer>
         </div>
@@ -1975,7 +2059,7 @@ git rebase -i {id}^
             </aside>
             
             <aside class="page_number">
-              6/24
+              8/26
             </aside>
           </footer>
         </div>
@@ -1990,7 +2074,7 @@ git rebase -i {id}^
             
             
             <section><ul>
-<li>Birden fazla gel&#351;tirici ile &ccedil;al&#305;&#351;&#305;yorsunuz</li>
+<li>Birden fazla geli&#351;tirici ile &ccedil;al&#305;&#351;&#305;yorsunuz</li>
 <li>&Ouml;nce as&#305;l repo&rsquo;yu fork ettiniz</li>
 <li><code>git clone</code> ile makinenize kopayalad&#305;n&#305;z</li>
 <li>Yeni bir dal a&ccedil;&#305;p &ouml;zeli&#287;inizi eklediniz</li>
@@ -2013,7 +2097,7 @@ git rebase -i {id}^
             </aside>
             
             <aside class="page_number">
-              7/24
+              9/26
             </aside>
           </footer>
         </div>
@@ -2051,7 +2135,7 @@ git rebase master
             </aside>
             
             <aside class="page_number">
-              8/24
+              10/26
             </aside>
           </footer>
         </div>
@@ -2081,7 +2165,7 @@ git rebase master
             </aside>
             
             <aside class="page_number">
-              9/24
+              11/26
             </aside>
           </footer>
         </div>
@@ -2121,7 +2205,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              10/24
+              12/26
             </aside>
           </footer>
         </div>
@@ -2151,7 +2235,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              11/24
+              13/26
             </aside>
           </footer>
         </div>
@@ -2189,7 +2273,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              12/24
+              14/26
             </aside>
           </footer>
         </div>
@@ -2226,7 +2310,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              13/24
+              15/26
             </aside>
           </footer>
         </div>
@@ -2261,7 +2345,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              14/24
+              16/26
             </aside>
           </footer>
         </div>
@@ -2277,7 +2361,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             
             <section><ul>
 <li>Her yeni &ouml;zellik ya da hata i&ccedil;in yeni dal</li>
-<li>Dal isimleri i&#351;lerle alakal&#305;</li>
+<li>Dal isimleri i&#351;lerle alakal&#305; olmal&#305;</li>
 <li>Kimin ne i&#351; yapt&#305;&#287;&#305; belli</li>
 <li>Geri d&ouml;n&uuml;lmesi kolay</li>
 </ul></section>
@@ -2296,7 +2380,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              15/24
+              17/26
             </aside>
           </footer>
         </div>
@@ -2326,7 +2410,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              16/24
+              18/26
             </aside>
           </footer>
         </div>
@@ -2361,7 +2445,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              17/24
+              19/26
             </aside>
           </footer>
         </div>
@@ -2409,7 +2493,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              18/24
+              20/26
             </aside>
           </footer>
         </div>
@@ -2444,7 +2528,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              19/24
+              21/26
             </aside>
           </footer>
         </div>
@@ -2474,7 +2558,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              20/24
+              22/26
             </aside>
           </footer>
         </div>
@@ -2507,7 +2591,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              21/24
+              23/26
             </aside>
           </footer>
         </div>
@@ -2539,7 +2623,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              22/24
+              24/26
             </aside>
           </footer>
         </div>
@@ -2550,21 +2634,14 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
         <div class="slide">
           <div class="inner">
             
-            <header><h2>Git Kullan&#305;m&#305; Ve Olas&#305; Sorunlar</h2></header>
+            <header><h2>Kaynaklar</h2></header>
             
             
             <section><ul>
-<li>
-<p>Di&#287;er geli&#351;tricilerinin de&#287;i&#351;ikliklerinin &uuml;zerine yazmak(git push &mdash;force)</p>
-<pre><code>git config --system receive.denyNonFastForwards true
-</code></pre>
-</li>
-<li>
-<p>Yerel deponuzda commitlenmemi&#351; de&#287;i&#351;ikliklerinizin &uuml;zerine yazmak</p>
-</li>
-<li>
-<p>Conflicts(&ccedil;ak&#305;&#351;malar)</p>
-</li>
+<li><a href="http://scottchacon.com/2011/08/31/github-flow.html">http://scottchacon.com/2011/08/31/github-flow.html</a></li>
+<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html</a></li>
+<li><a href="https://www.atlassian.com/git">https://www.atlassian.com/git</a></li>
+<li><a href="http://blackbe.lt/common-git-problems-and-solutions/">http://blackbe.lt/common-git-problems-and-solutions/</a></li>
 </ul></section>
             
           </div>
@@ -2581,7 +2658,7 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
             </aside>
             
             <aside class="page_number">
-              23/24
+              25/26
             </aside>
           </footer>
         </div>
@@ -2592,22 +2669,8 @@ git commit -m '... &ccedil;&ouml;z&uuml;ld&uuml;.'
         <div class="slide">
           <div class="inner">
             
-            <header><h2>&Ccedil;ak&#305;&#351;malar(conflict) Nas&#305;l  &Ccedil;&ouml;z&uuml;l&uuml;r?</h2></header>
+            <header><h2>Sorular ?</h2></header>
             
-            
-            <section><ul>
-<li>meld, vimdiff, diffmerge, git-mergetool&hellip;</li>
-<li>Basit bir text editorde i&#351; g&ouml;r&uuml;r</li>
-<li>
-<p>Conflict &ouml;rne&#287;i;</p>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Hello, master change.
-=======
-Hello, branch b1 change.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; b1
-</code></pre>
-</li>
-</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -2623,7 +2686,7 @@ Hello, branch b1 change.
             </aside>
             
             <aside class="page_number">
-              24/24
+              26/26
             </aside>
           </footer>
         </div>
@@ -2645,7 +2708,7 @@ Hello, branch b1 change.
           <footer>
             
             <aside class="page_number">
-              /24
+              /26
             </aside>
           </footer>
         </div>
@@ -2666,118 +2729,128 @@ Hello, branch b1 change.
       
         
         <tr id="toc-row-2" class="sub">
-          <th><a href="#slide2">De&#287;i&#351;iklik(Commit) Mesajlar&#305; Nas&#305;l Yaz&#305;l&#305;r?</a></th>
+          <th><a href="#slide2">Git Kullan&#305;m&#305; Ve Olas&#305; Sorunlar</a></th>
           <td><a href="#slide2">2</a></td>
         </tr>
         
         <tr id="toc-row-3" class="sub">
-          <th><a href="#slide3">&Ouml;rnek De&#287;i&#351;iklik (Commit) Mesaj&#305;</a></th>
+          <th><a href="#slide3">&Ccedil;ak&#305;&#351;malar(conflict) Nas&#305;l  &Ccedil;&ouml;z&uuml;l&uuml;r?</a></th>
           <td><a href="#slide3">3</a></td>
         </tr>
         
         <tr id="toc-row-4" class="sub">
-          <th><a href="#slide4">De&#287;i&#351;iklik (Commit) Mesaj&#305;n&#305; D&uuml;zeltme</a></th>
+          <th><a href="#slide4">De&#287;i&#351;iklik(Commit) Mesajlar&#305; Nas&#305;l Yaz&#305;l&#305;r?</a></th>
           <td><a href="#slide4">4</a></td>
         </tr>
         
         <tr id="toc-row-5" class="sub">
-          <th><a href="#slide5">Projeye Yeni &Ouml;zellik Ekleme</a></th>
+          <th><a href="#slide5">&Ouml;rnek De&#287;i&#351;iklik (Commit) Mesaj&#305;</a></th>
           <td><a href="#slide5">5</a></td>
         </tr>
         
         <tr id="toc-row-6" class="sub">
-          <th><a href="#slide6">Hata d&uuml;zeltme</a></th>
+          <th><a href="#slide6">De&#287;i&#351;iklik (Commit) Mesaj&#305;n&#305; D&uuml;zeltme</a></th>
           <td><a href="#slide6">6</a></td>
         </tr>
         
         <tr id="toc-row-7" class="sub">
-          <th><a href="#slide7">Ki&#351;isel kopya nas&#305;l y&ouml;netilir ?</a></th>
+          <th><a href="#slide7">Projeye Yeni &Ouml;zellik Ekleme</a></th>
           <td><a href="#slide7">7</a></td>
         </tr>
         
         <tr id="toc-row-8" class="sub">
-          <th><a href="#slide8">Git - rebase</a></th>
+          <th><a href="#slide8">Hata d&uuml;zeltme</a></th>
           <td><a href="#slide8">8</a></td>
         </tr>
         
         <tr id="toc-row-9" class="sub">
-          <th><a href="#slide9">Merge vs. Rebase</a></th>
+          <th><a href="#slide9">Ki&#351;isel kopya nas&#305;l y&ouml;netilir ?</a></th>
           <td><a href="#slide9">9</a></td>
         </tr>
         
         <tr id="toc-row-10" class="sub">
-          <th><a href="#slide10">Git merge &mdash;squash</a></th>
+          <th><a href="#slide10">Git - rebase</a></th>
           <td><a href="#slide10">10</a></td>
         </tr>
         
         <tr id="toc-row-11" class="sub">
-          <th><a href="#slide11">merge Vs. merge &mdash;squash</a></th>
+          <th><a href="#slide11">Merge vs. Rebase</a></th>
           <td><a href="#slide11">11</a></td>
         </tr>
         
         <tr id="toc-row-12" class="sub">
-          <th><a href="#slide12">Git Workflows</a></th>
+          <th><a href="#slide12">Git merge &mdash;squash</a></th>
           <td><a href="#slide12">12</a></td>
         </tr>
         
         <tr id="toc-row-13" class="sub">
-          <th><a href="#slide13">Github Workflow</a></th>
+          <th><a href="#slide13">merge Vs. merge &mdash;squash</a></th>
           <td><a href="#slide13">13</a></td>
         </tr>
         
         <tr id="toc-row-14" class="sub">
-          <th><a href="#slide14"><code>master</code>dal&#305; stabil olmal&#305;</a></th>
+          <th><a href="#slide14">Git Workflows</a></th>
           <td><a href="#slide14">14</a></td>
         </tr>
         
         <tr id="toc-row-15" class="sub">
-          <th><a href="#slide15">Dallarla(branch) &ccedil;al&#305;&#351;</a></th>
+          <th><a href="#slide15">Github Workflow</a></th>
           <td><a href="#slide15">15</a></td>
         </tr>
         
         <tr id="toc-row-16" class="sub">
-          <th><a href="#slide16">Dallarla(branch) &ccedil;al&#305;&#351;</a></th>
+          <th><a href="#slide16"><code>master</code>dal&#305; stabil olmal&#305;</a></th>
           <td><a href="#slide16">16</a></td>
         </tr>
         
         <tr id="toc-row-17" class="sub">
-          <th><a href="#slide17">&#304;lgili dal&#305; sunucuya g&ouml;nder</a></th>
+          <th><a href="#slide17">Dallarla(branch) &ccedil;al&#305;&#351;</a></th>
           <td><a href="#slide17">17</a></td>
         </tr>
         
         <tr id="toc-row-18" class="sub">
-          <th><a href="#slide18">&#304;lgili dal&#305; sunucuya g&ouml;nder</a></th>
+          <th><a href="#slide18">Dallarla(branch) &ccedil;al&#305;&#351;</a></th>
           <td><a href="#slide18">18</a></td>
         </tr>
         
         <tr id="toc-row-19" class="sub">
-          <th><a href="#slide19">Tak&#305;ld&#305;&#287;&#305;n yerde <code>pull request</code> a&ccedil;</a></th>
+          <th><a href="#slide19">&#304;lgili dal&#305; sunucuya g&ouml;nder</a></th>
           <td><a href="#slide19">19</a></td>
         </tr>
         
         <tr id="toc-row-20" class="sub">
-          <th><a href="#slide20">Tak&#305;ld&#305;&#287;&#305;n yerde <code>pull request</code> a&ccedil;</a></th>
+          <th><a href="#slide20">&#304;lgili dal&#305; sunucuya g&ouml;nder</a></th>
           <td><a href="#slide20">20</a></td>
         </tr>
         
         <tr id="toc-row-21" class="sub">
-          <th><a href="#slide21">&#304;stek onaylan&#305;rsa <code>merge</code> yap</a></th>
+          <th><a href="#slide21">Tak&#305;ld&#305;&#287;&#305;n yerde <code>pull request</code> a&ccedil;</a></th>
           <td><a href="#slide21">21</a></td>
         </tr>
         
         <tr id="toc-row-22" class="sub">
-          <th><a href="#slide22"><code>master</code> dal&#305;na g&ouml;nder</a></th>
+          <th><a href="#slide22">Tak&#305;ld&#305;&#287;&#305;n yerde <code>pull request</code> a&ccedil;</a></th>
           <td><a href="#slide22">22</a></td>
         </tr>
         
         <tr id="toc-row-23" class="sub">
-          <th><a href="#slide23">Git Kullan&#305;m&#305; Ve Olas&#305; Sorunlar</a></th>
+          <th><a href="#slide23">&#304;stek onaylan&#305;rsa <code>merge</code> yap</a></th>
           <td><a href="#slide23">23</a></td>
         </tr>
         
         <tr id="toc-row-24" class="sub">
-          <th><a href="#slide24">&Ccedil;ak&#305;&#351;malar(conflict) Nas&#305;l  &Ccedil;&ouml;z&uuml;l&uuml;r?</a></th>
+          <th><a href="#slide24"><code>master</code> dal&#305;na g&ouml;nder</a></th>
           <td><a href="#slide24">24</a></td>
+        </tr>
+        
+        <tr id="toc-row-25" class="sub">
+          <th><a href="#slide25">Kaynaklar</a></th>
+          <td><a href="#slide25">25</a></td>
+        </tr>
+        
+        <tr id="toc-row-26" class="sub">
+          <th><a href="#slide26">Sorular ?</a></th>
+          <td><a href="#slide26">26</a></td>
         </tr>
         
       
