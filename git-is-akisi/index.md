@@ -50,7 +50,7 @@ http://mhmtbsl.net/
 ##   Örnek Değişiklik (Commit) Mesajı
 
 
-        bin: Kopyala yapıştır hatası düzeltildi
+        bin: Kopyala yapıştır hatası düzelt
 
         Kopyala yapıştırla gelen "estetik tırnaklar"dan dolayı bu ayar
         etkin olduğunda veritabanı bağlantıları kopuyordu. Sadece bu
