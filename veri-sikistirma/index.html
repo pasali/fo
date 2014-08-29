@@ -1105,6 +1105,13 @@ div.slide table:not(.highlighttable) tr td:first-child {
     var showingPresenterView = false;
     var presenterViewWin = null;
     var isPresenterView = false;
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf('android') > -1;
+
+    if (isAndroid) {
+      document.querySelector('meta[name=viewport]').setAttribute('content',
+	'width=device-width, initial-scale=0.7, maximum-scale=0.7, user-scalable=no'
+      );
+    }
 
     var str2array = function(s) {
         if (typeof s == 'string' || s instanceof String) {
@@ -1597,6 +1604,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
 
     var addTouchListeners = function() {
         document.addEventListener('touchstart', function(e) {
+	    if (isAndroid) e.preventDefault();
             touchStartX = e.touches[0].pageX;
         }, false);
         document.addEventListener('touchend', function(e) {
@@ -1869,9 +1877,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             
             
             <section><ul>
-<li>
-<p>&#304;ki &ccedil;e&#351;it s&#305;k&#305;&#351;t&#305;rma t&uuml;r&uuml; vard&#305;r</p>
-<pre><code>* Kay&#305;pl&#305; s&#305;k&#305;&#351;t&#305;rma
+<li>&#304;ki &ccedil;e&#351;it s&#305;k&#305;&#351;t&#305;rma t&uuml;r&uuml; vard&#305;r<pre><code>* Kay&#305;pl&#305; s&#305;k&#305;&#351;t&#305;rma
 
 * Kay&#305;ps&#305;z s&#305;k&#305;&#351;t&#305;rma
 </code></pre>
@@ -2404,9 +2410,7 @@ div.slide table:not(.highlighttable) tr td:first-child {
             <section><ul>
 <li>Ayn&#305; byte dizinin s&#305;k kullan&#305;ld&#305;&#287;&#305; dosyalar i&ccedil;in uygun</li>
 <li>Tekrar eden dizin 3 byte ile de&#287;i&#351;tirilir</li>
-<li>
-<p>Bu 3 byte:</p>
-<pre><code>* &Ouml;zel bir escape karakteri (FF)
+<li>Bu 3 byte:<pre><code>* &Ouml;zel bir escape karakteri (FF)
 * Tekrar eden de&#287;er
 * Tekrar say&#305;s&#305;
 </code></pre>
