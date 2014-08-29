@@ -1,4 +1,4 @@
-#   Google Power User
+#   Google İp Uçları
 
 .fx: first
 
